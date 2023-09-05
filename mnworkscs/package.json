@@ -1,0 +1,42 @@
+{
+	"name": "kex",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@fontsource/fira-mono": "^4.5.10",
+		"@neoconfetti/svelte": "^1.0.0",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-node": "^1.0.0-next.106",
+		"@sveltejs/kit": "^1.5.0",
+		"@types/cookie": "^0.5.1",
+		"@types/siema": "^1.4.8",
+		"svelte": "^3.54.0",
+		"svelte-carousel": "^1.0.25",
+		"svelte-check": "^3.0.1",
+		"svelte-preprocess": "^5.0.3",
+		"typescript": "^5.0.0",
+		"vite": "^4.3.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@splidejs/svelte-splide": "^0.2.9",
+		"crypto-js": "^4.1.1",
+		"file-saver": "^2.0.5",
+		"heic-convert": "^1.2.4",
+		"heic2any": "^0.0.4",
+		"jsbarcode": "^3.11.5",
+		"mysql": "^2.18.1",
+		"mysql2": "^3.3.3",
+		"nodemailer": "^6.9.4",
+		"sass": "^1.62.1",
+		"svelte-daum-postcode": "^0.0.1",
+		"swiper": "^10.1.0",
+		"xlsx": "^0.18.5"
+	}
+}

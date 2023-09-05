@@ -1,0 +1,299 @@
+/* root */
+:root{
+
+    --orange : #ED6D02;
+    --gray : #BEB9B9;
+    --beige : #FFF1E5;
+
+    --bg-gray:#EFEFEF;
+    --border-gray:#D3D3D3;
+	--gray100: #F5F5F5;
+	--gray300: #E0E0E0;
+	--gray400: #BDBDBD;
+	--gray500: #9E9E9E;
+	--gray700: #616161;
+
+	--font-head-giant: 36px;
+    --font-head-big: 32px;
+    --font-head-middle: 26px;
+    --font-head-normal: 22px;
+    --font-head-small: 20px;
+    --font-body-middle: 18px;
+    --font-body-normal: 16px;
+    --font-body-small: 14px;
+    --font-body-tiny: 12px;
+
+	// --swiper-pagination-bullet-inactive-width: 20px;
+}
+
+
+/* Font */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+*{
+    font-family: Pretendard,Roboto,Noto Sans KR,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif;
+    color:black;
+    font-size: var(--font-size-normal);
+}
+
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    text-decoration: none;
+}
+
+
+.wrap{
+	width: 100%;
+	max-width: 1048px;
+	margin:0 auto;
+}
+
+@media screen and (max-width:1048px) {
+	.wrap{
+		width:calc(100% - 72px);
+		margin:0 36px;
+	}
+}
+
+
+button{
+	font-size: var(--font-body-normal);
+	background: var(--orange);
+	color:#fff;
+	font-weight: 500;
+	min-width: 82px;
+	height:38px;
+	border-radius: 26px;
+	border:0;
+	cursor: pointer;
+	font-weight: 600;
+	&:active{
+		opacity: 0.8;
+	}
+}
+
+input[type='text'],input[type='date'],input[type='password']{
+	font-size: var(--font-body-normal);
+	padding:10px 12px;
+	border:1px solid var(--border-gray);
+	border-radius: 12px;
+	width:calc(100% - 44px);
+	max-width: 516px;
+	box-sizing: border-box;
+}
+
+input[type='file']{
+	display: none;
+}
+
+input[type='checkbox']{
+	opacity: 0;
+	width:0;
+	height:0;
+	padding:0;
+	margin:0;
+}
+
+input[type='checkbox'] + label{
+	cursor: pointer;
+	position: relative;
+	&::before{
+		content: '';
+		display: inline-block;
+		width:20px;
+		height:20px;
+		border:1px solid var(--border-gray);
+		border-radius: 5px;
+		margin-right:10px;
+	}
+}
+input[type='checkbox']:checked + label{
+	&::after{
+		content: '';
+		position:absolute;
+		left:4px;
+		top:5px;
+		width:14px;
+		height:14px;
+		background:var(--orange);
+		border-radius: 3px;
+	}
+}
+
+select{
+	font-size: var(--font-body-normal);
+	padding:10px 12px;
+	border:1px solid var(--border-gray);
+	border-radius: 12px;
+	width: 262px;
+	box-sizing: content-box;
+	appearance: unset;
+	position: relative;
+	background: transparent;
+}
+
+.select{
+	position: relative;
+	display: flex;
+	width:100%;
+	max-width: 262px;
+	&::after{
+		content: '';
+		position: absolute;
+		top:calc(50% - 5px);
+		right:20px;
+		width: 10px;
+		height:10px;
+		border:1px solid #444;
+		border-top:0px;
+		border-right:0px;
+		transform: rotate(-45deg) translateY(-50%);
+		transform-origin:center;
+		z-index: -1;
+	}
+}
+
+.more-view {
+	font-size: var(--font-body-small);
+	color: var(--gray700);
+	position: relative;
+	margin-right: 10px;
+	cursor: pointer;
+	&::after {
+		content: '';
+		display: block;
+		width: 6px;
+		height: 6px;
+		border-right: 1px solid var(--gray700);
+		border-bottom: 1px solid var(--gray700);
+		transform: rotate(-45deg);
+		position: absolute;
+		top: 4px;
+		right: -10px
+	}
+}
+
+.caption {
+	font-size: var(--font-body-small);
+	color: var(--gray700)
+}
+
+.star-mark { color: var(--orange); }
+
+*::placeholder{
+	color:#707070;
+}
+
+
+@media only screen and (max-width:1024px){
+    
+}
+
+@media only screen and (max-width:768px){
+	:root{
+		--font-size-big: 32px;
+		--font-size-middle: 14px;
+		--font-size-normal: 14px;
+		--font-size-small: 14px;
+	}
+
+
+	input[type='text'],input[type='date'],input[type='password']{
+		font-size: var(--font-body-normal);
+		padding:10px 11px;
+		border-radius: 12px;
+		// width:calc(100% - 22px);
+		max-width: 100%;
+	}
+
+	select{
+		font-size: var(--font-body-normal);
+		padding:10px 11px;
+		border-radius: 12px;
+		// width:calc(100% - 22px);
+		width: 100%;
+	}
+	
+	.select{
+		max-width:100%;
+	// 	// max-width: 245px;
+	// 	&::after{
+	// 		top:calc(50% - 5px);
+	// 		right:13.5px;
+	// 		width: 10px;
+	// 		height:10px;
+	// 		transform: rotate(-45deg) translateY(-50%);
+	// 		z-index: -1;
+	// 	}
+	}
+
+	button{
+		font-size: 12px;
+		min-width: 82px;
+		height:37px;
+		border-radius: 18.5px;
+	}
+
+	input[type='checkbox'] + label{
+		&::before{
+			width:19px;
+			height:19px;
+			border-radius: 5px;
+			margin-right:9px;
+		}
+	}
+	input[type='checkbox']:checked + label{
+		&::after{
+			left:4px;
+			top:1px;
+			width:13px;
+			height:13px;
+		}
+	}
+	.more-view {
+		font-size: var(--font-body-tiny);
+	}
+}
